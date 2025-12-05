@@ -60,7 +60,7 @@ bool oracle(int x, int y, int t, int i, int j, int k,
             int xP, int yP, int tP, int iP, int jP, int kP)
     {return !domR(x,y,t,i,j,k) || R(x,y,t,i,j,k,xP,yP,tP,iP,jP,kP);}
 bool domR(int x,int y,int t,int i,int j,int k)
-    { return (i != j) || (i >= 0 && y >= 0);}
+    { return  y>=0 && i!=j && t>0 && k>=0 ;}
 bool R(int x, int y, int t, int i, int j, int k,
         int xP, int yP, int tP, int iP, int jP, int kP)
     {return (i>j && yP == (3^(i-j+2)-3)/2) || (yP == x*Fib(j)+y*Fib(jP-1));}
